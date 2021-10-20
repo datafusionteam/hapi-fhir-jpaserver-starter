@@ -20,4 +20,4 @@ COPY --from=build ./src/main/resources/hapi.properties /hapi-config/hapi.propert
 
 USER jetty:jetty
 EXPOSE 8080
-CMD ["java","-Dhapi.properties=/hapi-config/hapi.properties","-jar","/usr/local/jetty/start.jar"]
+CMD ["java","-Dhapi.properties=/config/hapi.properties","-jar","/usr/local/jetty/start.jar"]
